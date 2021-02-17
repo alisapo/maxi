@@ -44,6 +44,7 @@ class App extends React.Component {
     ];
 
     this.handleData = this.handleData.bind(this);
+    this.getAvailability = this.getAvailability.bind(this);
   }
 
   handleData(name, value) {
@@ -94,6 +95,18 @@ class App extends React.Component {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  getButton() {
+    const { form } = this.state;
+
+    if (
+      form.username
+      && form.email
+      && form.password
+    ) return false;
+
+    return true;
   }
 
   render() {
@@ -191,7 +204,7 @@ class App extends React.Component {
               </div>
               {!err.terms ? '' : <div className="err-terms">{err.terms}</div>}
             </div>
-            <button className="btn-disabled" type="submit">Sign up</button>
+            <button disabled={this.getButton()} type="submit">Sign up</button>
           </form>
         </div>
       </div>

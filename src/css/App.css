@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --colorWhite: #ffffff;
+}
+
+.app {
+  display: flex;
+  background-color: #102250;
+  justify-content: center;
+  padding-top: 48px;
+}
+
+

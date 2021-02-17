@@ -6,13 +6,143 @@
 
 :root {
   --colorWhite: #ffffff;
+  --inpBackColor: #f5f8fa;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #102250;
 }
 
 .app {
   display: flex;
-  background-color: #102250;
   justify-content: center;
   padding-top: 48px;
 }
 
+.container {
+  background-color: var(--colorWhite);
+  width: 400px;
+  height: 605px;
+  border-radius: 10px;
+  padding-top: 7px;
+}
 
+h1 {
+  font-size: 30px;
+  padding-left: 63px;
+}
+
+form {
+  margin-top: 24px;
+  padding-left: 30px;
+}
+
+.email div,
+.password div {
+  display: flex;
+}
+
+.email input,
+.password input {
+  outline: none;
+  border: none;
+  background-color: var(--inpBackColor);
+  width: 313px;
+  height: 50px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin: 11px 0px 11px 0px;
+  padding-left: 15px;
+}
+
+svg {
+  fill: #a2a2a2;
+}
+
+.back-img-mail,
+.back-img-pass {
+  background-color: var(--inpBackColor);
+  height: 50px;
+  margin: 11px 0px 11px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  padding-left: 15px;
+}
+
+.username input {
+  width: 342px;
+  padding-left: 15px;
+  outline: none;
+  border: none;
+  background-color: var(--inpBackColor);
+  height: 50px;
+  border-radius: 7px;
+  margin: 11px 0px 11px 0px;
+}
+
+select {
+  width: 342px;
+  height: 50px;
+  padding-left: 10px;
+  /* margin-bottom: 22px; */
+  margin: 11px 0px 11px 0px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--inpBackColor);
+}
+
+.err-username,
+.err-email,
+.err-password,
+.err-country,
+.err-gender,
+.err-terms {
+  color: #e82828;
+}
+
+.gender {
+  padding: 13px 0px 19px 0px;
+}
+
+input[type="radio" i] {
+  margin: 0px 8px 0px 0px;
+}
+
+label {
+  margin-right: 23px;
+  cursor: pointer;
+}
+
+.terms {
+  padding-bottom: 37px;
+}
+
+input[type="checkbox" i] {
+  margin: 0px 9px 0px 0px;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: var(--colorWhite);
+  font-size: 16px;
+  border-radius: 30px;
+  width: 342px;
+  height: 60px;
+  padding: 11px 20px 10px 20px;
+}
+
+.btn-disabled {
+  background-color: #a2a2a2;
+}
+
+.btn-active {
+  background-color: #0094ff;
+}

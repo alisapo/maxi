@@ -115,23 +115,41 @@ class App extends React.Component {
               {!err.username ? '' : <div className="err-username">{err.username}</div>}
             </div>
             <div className="email">
-              <input
-                name="email"
-                type="text"
-                placeholder="Email"
-                value={form.email}
-                onInput={(e) => this.handleData(e.target.name, e.target.value)}
-              />
+              <div>
+                <div className="back-img-mail">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path class="a"
+                      d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7a3,3,0,0,0-3-3Zm-.67,2L12,10.75,5.67,6ZM19,18H5a1,1,0,0,1-1-1V7.25l7.4,5.55a1,1,0,0,0,1.2,0L20,7.25V17A1,1,0,0,1,19,18Z"
+                      transform="translate(-2 -4)" />
+                  </svg>
+                </div>
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  value={form.email}
+                  onInput={(e) => this.handleData(e.target.name, e.target.value)}
+                />
+              </div>
               {!err.email ? '' : <div className="err-email">{err.email}</div>}
             </div>
             <div className="password">
-              <input
-                name="password"
-                type="password"
-                placeholder="Password"
-                value={form.password}
-                onInput={(e) => this.handleData(e.target.name, e.target.value)}
-              />
+              <div>
+                <div className="back-img-pass">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19.89" viewBox="0 0 16 19.89">
+                    <path class="a"
+                      d="M17,8H16V6.11a4,4,0,0,0-8,0V8H7a3,3,0,0,0-3,3v8a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V11A3,3,0,0,0,17,8ZM10,6.11a2,2,0,1,1,4,0V8H10ZM18,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V11a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1Z" transform="translate(-4 -2.11)" /><path class="a" d="M12,12a3,3,0,1,0,3,3A3,3,0,0,0,12,12Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,12,16Z"
+                      transform="translate(-4 -2.11)" />
+                  </svg>
+                </div>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  value={form.password}
+                  onInput={(e) => this.handleData(e.target.name, e.target.value)}
+                />
+              </div>
               {!err.password ? '' : <div className="err-password">{err.password}</div>}
             </div>
             <div className="country">
@@ -146,20 +164,20 @@ class App extends React.Component {
             <div className="gender">
               <div>
                 <label>
-                <input
-                  name="gender"
-                  value="male"
-                  type="radio"
-                />
-                <span>Male</span>
+                  <input
+                    name="gender"
+                    value="male"
+                    type="radio"
+                  />
+                  <span>Male</span>
                 </label>
                 <label>
-                <input
-                  name="gender"
-                    value="female"
-                  type="radio"
-                />
-                <span>Female</span>
+                  <input
+                    name="gender"
+                      value="female"
+                    type="radio"
+                  />
+                  <span>Female</span>
                 </label>
               </div>
               {!err.gender ? '' : <div className="err-gender">{err.gender}</div>}

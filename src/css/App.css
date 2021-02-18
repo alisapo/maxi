@@ -7,6 +7,10 @@
 :root {
   --colorWhite: #ffffff;
   --inpBackColor: #f5f8fa;
+  --lightBlue: #0094ff;
+  --lightGrey: #a2a2a2;
+  --robotoBold: 'Roboto-Bold';
+  --rootoRegular: 'Roboto-Regular';
 }
 
 body {
@@ -24,13 +28,14 @@ body {
 .container {
   background-color: var(--colorWhite);
   width: 400px;
-  height: 605px;
   border-radius: 10px;
-  padding-top: 7px;
+  padding-top: 15px;
+  padding-bottom: 55px;
 }
 
 h1 {
-  font-size: 30px;
+  font-family: var(--robotoBold);
+  font-size: 28px;
   padding-left: 63px;
 }
 
@@ -49,7 +54,7 @@ form {
   outline: none;
   border: none;
   background-color: var(--inpBackColor);
-  width: 313px;
+  font-family: var(--rootoRegular);
   height: 50px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -57,8 +62,16 @@ form {
   padding-left: 15px;
 }
 
+.password input {
+  width: 313px;
+}
+
+.email input {
+  width: 310px;
+}
+
 svg {
-  fill: #a2a2a2;
+  fill: var(--lightGrey);
 }
 
 .back-img-mail,
@@ -80,6 +93,7 @@ svg {
   outline: none;
   border: none;
   background-color: var(--inpBackColor);
+  font-family: var(--rootoRegular);
   height: 50px;
   border-radius: 7px;
   margin: 11px 0px 11px 0px;
@@ -89,12 +103,24 @@ select {
   width: 342px;
   height: 50px;
   padding-left: 10px;
-  /* margin-bottom: 22px; */
   margin: 11px 0px 11px 0px;
   border-radius: 7px;
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: var(--inpBackColor);
+  font-family: var(--rootoRegular);
+}
+
+option {
+  border: none;
+  outline: none;
+  padding-top: 10px;
+  background-color: var(--colorWhite);
+  font-family: var(--rootoRegular);
+}
+
+option:hover {
   background-color: var(--inpBackColor);
 }
 
@@ -105,10 +131,16 @@ select {
 .err-gender,
 .err-terms {
   color: #e82828;
+  font-family: var(--rootoRegular);
 }
 
 .gender {
   padding: 13px 0px 19px 0px;
+}
+
+.gender span {
+  font-size: 14px;
+  font-family: var(--rootoRegular);
 }
 
 input[type="radio" i] {
@@ -124,29 +156,59 @@ label {
   padding-bottom: 37px;
 }
 
+.terms span {
+  font-size: 14px;
+  font-family: var(--rootoRegular);
+}
+
 input[type="checkbox" i] {
   margin: 0px 9px 0px 0px;
 }
 
 a {
-  
+  outline: none;
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--lightBlue);
 }
 
 button {
   outline: none;
   border: none;
+  cursor: pointer;
   color: var(--colorWhite);
-  font-size: 16px;
+  font-family: var(--rootoRegular);
+  font-size: 17px;
   border-radius: 30px;
   width: 342px;
   height: 60px;
-  padding: 11px 20px 10px 20px;
+  padding: 11px 20px 9px 20px;
+}
+
+button:enabled:hover {
+  background-color: #00193685;
 }
 
 button:disabled {
-  background-color: #a2a2a2;
+  background-color: var(--lightGrey);
 }
 
 button:enabled {
-  background-color: #0094ff;
+  background-color: var(--lightBlue);
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(./fonts/Roboto-Bold.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(./fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
